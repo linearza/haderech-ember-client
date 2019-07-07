@@ -39,7 +39,8 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+First time? Setup here:
+https://github.com/ef4/ember-cli-deploy-git#usage
 
 ## Further Reading / Useful Links
 
