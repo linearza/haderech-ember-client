@@ -1,1 +1,4 @@
-@import 'sanitize';
+@import 'base/sanitize';
+@import 'base/root';
+
+@import 'modules/splash-element';

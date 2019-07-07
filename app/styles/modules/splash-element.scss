@@ -1,0 +1,45 @@
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(-70%);
+  }
+  to   {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+}
+
+.splash-element{
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  text-align: center;
+  animation: fadeInSlideUp 2.5s;
+  h1 {
+    font-family: 'Cardo', serif;
+    display: block;
+    text-align: center;
+    margin: 0;
+  }
+
+  h2 {
+    font-weight: 300;
+  }
+
+  p{
+    font-family: 'Cardo', serif;
+    font-style: italic;
+    padding: 0 16px;
+    font-size: 20px;
+    line-height: 1.4;
+    max-width: 720px;
+    margin: 24px auto;
+  }
+
+  b{
+    font-weight: bold;
+    font-style: normal;
+  }
+}
+
