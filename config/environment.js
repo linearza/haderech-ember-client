@@ -44,7 +44,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.rootURL = '/haderech-ember-client';
+    ENV.locationType = 'hash';
   }
 
   return ENV;
