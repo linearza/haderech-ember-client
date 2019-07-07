@@ -1,9 +1,7 @@
-<div class="splash-element">
-  <h2>הדרך</h2>
-  <h1>HaDerech</h1>
-  <h2>The Way</h2>
-
-  <p>"You shall walk in all <b>the ways</b> which the Lord your God has commanded you, that you may live and that it may be well with you, and that you may prolong your days in the land which you shall possess." Deuteronomy 5:33</p>
-</div>
+ {{#if session.isAuthenticated}}
+    <a {{action 'invalidateSession'}}>Logout</a>
+  {{else}}
+    {{#link-to 'login'}}Login{{/link-to}}
+  {{/if}}
 
 {{outlet}}
