@@ -25,8 +25,8 @@ module.exports = function(environment) {
   };
 
   ENV['ember-simple-auth-token'] = {
-    serverTokenEndpoint: '/api/v1/authenticate/', // Server endpoint to send authenticate request
-    tokenPropertyName: 'token', // Key in server response that contains the access token
+    serverTokenEndpoint: '/api/v1/authenticate', // Server endpoint to send authenticate request
+    tokenPropertyName: 'auth_token', // Key in server response that contains the access token
     headers: {} // Headers to add to the
   };
 

@@ -6,16 +6,15 @@ export default Ember.Service.extend({
   session: service('session'),
   store: service(),
 
-  load() {
-    let userId = this.get('session.data.authenticated.user_id');
+  user: null,
 
-    debugger;
-    if (!isEmpty(userId)) {
-      return this.get('store').findRecord('user', userId).then((user) => {
+  load() {
+    if (this.get('session.isAuthenticated')) {
+      return this.get('store').queryRecord('user', { me: true }).then((user) => {
         this.set('user', user);
       });
     } else {
-      return Ember.RSVP.resolve();
+      return RSVP.resolve();
     }
   }
 });
