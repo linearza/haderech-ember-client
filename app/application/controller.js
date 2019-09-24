@@ -3,6 +3,8 @@ import { inject as service } from '@ember/service';
 
 export default Controller.extend({
   session: service(),
+  flashMessages: service(),
+
   actions: {
     invalidateSession() {
       this.get('session').invalidate();

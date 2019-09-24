@@ -11,6 +11,8 @@ Router.map(function() {
     path: ''
   });
   this.route('login');
+  this.route('register');
+  this.route('register-success');
   this.route('authenticated', { path: 'member' }, function() {
     // all routes that require the session to be authenticated
     this.route('index', {

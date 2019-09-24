@@ -1,0 +1,27 @@
+<div class="container center">
+  <h1>Register</h1>
+
+  <form class="w300" {{action 'register' on='submit'}}>
+    <label for="name">
+      {{input id='name' placeholder='Name' value=user.name}}
+    </label>
+    <label for="email">
+      {{input id='email' placeholder='Email' value=user.email}}
+    </label>
+    <label for="password">
+      {{input id='password' placeholder='Password' type='password' value=user.password}}
+    </label>
+    <label for="password-confirmation">
+      {{input id='password-confirmation' placeholder='Confirm password' type='password' value=user.passwordConfirmation}}
+    </label>
+    <br>
+    <button type="submit">Register</button>
+
+    {{#if errorMessage}}
+      <div class="alert-box error">
+        {{errorMessage}}
+      </div>
+    {{/if}}
+
+  </form>
+</div>

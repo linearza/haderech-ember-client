@@ -5,12 +5,14 @@ export default Controller.extend({
   session: inject('session'),
 
   actions: {
-    authenticate: function() {
+    authenticate() {
       const credentials = this.getProperties('email', 'password');
       const authenticator = 'authenticator:token'; // or 'authenticator:jwt'
 
       this.get('session').authenticate(authenticator, credentials).then(() =>{
         // redirect on success
+      }).catch((e) => {
+        console.log('error', e)
       })
     }
   }

@@ -7,11 +7,10 @@ import {
 export default Route.extend(ApplicationRouteMixin, {
 
   currentUser: service(),
-
   routeAfterAuthentication: 'authenticated.index',
 
   beforeModel() {
-    this.transitionTo('index');
+    // this.transitionTo('index');
     return this._loadCurrentUser();
   },
 
