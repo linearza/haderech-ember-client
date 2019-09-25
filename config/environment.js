@@ -56,8 +56,10 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.rootURL = '/';
-    ENV.locationType = 'hash';
+    // ENV.rootURL = '/';
+    // ENV.locationType = 'hash';
+
+    ENV.APP.host = 'https://young-fortress-36067.herokuapp.com';
   }
 
   return ENV;
