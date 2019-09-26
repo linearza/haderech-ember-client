@@ -7,5 +7,6 @@ export default DS.Model.extend({
   admin: DS.attr(),
   confirmed: DS.attr(),
 
-  confirmUser: memberAction({ path: 'confirm-user' })
+  confirmUser: memberAction({ path: 'confirm-user' }),
+  deconfirmUser: memberAction({ path: 'deconfirm-user' })
 });

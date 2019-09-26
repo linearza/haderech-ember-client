@@ -30,6 +30,15 @@ export default Ember.Route.extend({
       }).catch((e) =>{
         this.flashMessages.success('Failed confirmation!');
       })
+    },
+
+    deconfirmUser(user){
+      user.deconfirmUser().then((res) => {
+        this.get('store').pushPayload(res);
+        this.flashMessages.success(`Successfully deconfirmed ${user.get('name')}.`);
+      }).catch((e) =>{
+        this.flashMessages.success('Failed deconfirmation!');
+      })
     }
   }
 
