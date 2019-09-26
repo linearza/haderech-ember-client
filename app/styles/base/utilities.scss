@@ -1,0 +1,8 @@
+$sizes: 0, 8, 10, 16, 20, 24, 40, 48;
+
+@each $size in $sizes {
+  .pt#{$size}{ padding-top: #{$size}px };
+  .pb#{$size}{ padding-bottom: #{$size}px  };
+  .mt#{$size}{ margin-top: #{$size}px };
+  .mb#{$size}{ margin-bottom: #{$size}px  };
+}

@@ -2,14 +2,19 @@
 
 
 <div class="user-menu">
-  {{#link-to 'index'}}Home{{/link-to}}
-  |
+  {{#link-to 'index'}}{{svg-jar "home"}}{{/link-to}}
+
   {{#if session.isAuthenticated}}
-    <a {{action 'invalidateSession'}}>Logout</a>
+
+    {{#link-to 'authenticated.index'}}{{svg-jar "profile"}}{{/link-to}}
+
+    {{#if currentUser.user.admin}}
+      {{#link-to 'authenticated.admin'}}{{svg-jar "admin"}}{{/link-to}}
+    {{/if}}
+
+    <a {{action 'invalidateSession'}}>{{svg-jar "exit"}}</a>
   {{else}}
-    {{#link-to 'login'}}Login{{/link-to}}
-    |
-    {{#link-to 'register'}}Register{{/link-to}}
+    {{#link-to 'login'}}{{svg-jar "fingerprint"}}{{/link-to}}
   {{/if}}
 </div>
 

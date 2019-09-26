@@ -2,8 +2,8 @@
   position: fixed;
   top: 20px;
   right: 20px;
-  background: $white;
   &.alert {
+    background: $white;
     opacity: 0;
     right: 0px;
     border: 1px solid $black;
@@ -12,7 +12,6 @@
     font-size: 12px;
     padding: 4px 16px;
     box-shadow: 1px 2px 0px;
-
     transition: all 700ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     &.active {

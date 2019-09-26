@@ -3,4 +3,11 @@
   bottom: 0;
   right: 0;
   padding: 10px;
+  a {
+    cursor: pointer;
+    padding: 4px;
+    svg {
+      fill: $black;
+    }
+  }
 }
