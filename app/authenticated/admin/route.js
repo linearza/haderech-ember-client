@@ -10,6 +10,13 @@ export default Ember.Route.extend({
       console.log('Not admin!');
       this.transitionTo('index');
     }
+  },
+
+  setupController(controller){
+    this._super(...arguments);
+
+    controller.set('users', this.store.findAll('user'));
+
   }
 
 });

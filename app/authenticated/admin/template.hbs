@@ -3,6 +3,12 @@
 
   <p>Hello {{currentUser.user.name}}, you are an admin.</p>
 
+  <h3 class="mt40">Users</h3>
+
+  {{#each users as |user|}}
+    <div>{{user.name}} | {{user.email}}</div>
+  {{/each}}
+
 </div>
 
 
