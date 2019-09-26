@@ -6,7 +6,7 @@
   <h3 class="mt40">Users</h3>
 
   {{#each users as |user|}}
-    <div>{{user.name}} | {{user.email}}</div>
+    <div>{{user.name}} | {{user.email}} | {{if user.confirmed 'Confirmed' 'Not confirmed'}} {{#if (not user.confirmed)}}| <span {{action 'confirmUser' user}}>Confirm</span>{{/if}}</div>
   {{/each}}
 
 </div>

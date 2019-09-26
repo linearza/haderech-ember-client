@@ -1,6 +1,9 @@
 import Ember from 'ember';
+import { inject as service } from '@ember/service';
 
 export default Ember.Route.extend({
+
+  flashMessages: service(),
 
   beforeModel(transition){
     this._super(...arguments);
@@ -17,6 +20,17 @@ export default Ember.Route.extend({
 
     controller.set('users', this.store.findAll('user'));
 
+  },
+
+  actions: {
+    confirmUser(user){
+      user.confirmUser().then((res) => {
+        this.get('store').pushPayload(res);
+        this.flashMessages.success(`Successfully confirmed ${user.get('name')}!`);
+      }).catch((e) =>{
+        this.flashMessages.success('Failed confirmation!');
+      })
+    }
   }
 
 });
